@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js" lang="javascript"></script>
+        <title>Calculator</title>
+</head>
+
+<body>
+        <form name="sci-calc">
+                <table class="calculator">
+                        <tr>
+                                <td colspan="5"><input id="display" value="0"></td>
+                        </tr>
+                        <tr>
+                                <td><input type="button" class="btnMath" value="MS" onclick="memoryStore()"></td>
+                                <td><input type="button" class="btnMath" value="MR" onclick="memoryRecall()"></td>
+                                <td><input type="button" class="btnMath" value="M+" onclick="memoryAdd()"></td>
+                                <td><input type="button" class="btnMath" value="M-" onclick="memorySub()">
+                                </td>
+                                <td><input type="button" class="btnMath" value="MC" onclick="memoryClear()">
+                                </td>
+                        </tr>
+                        <tr>
+                                <td><input type="button" class="btnTop" value="del" onclick="deleteChar(display)">
+                                </td>
+                                <td><input type="button" class="btnOpps" value="(" onclick="addChar(display , '(')">
+                                </td>
+                                <td><input type="button" class="btnOpps" value=")" onclick="addChar(display,')')"></td>
+                                <td><input type="button" class="btnOpps" value="%" onclick=" percentage()">
+                                </td>
+                                <td><input type="button" class="btnTop" value="C" onclick="display.value=  0 ">
+                                </td>
+                        </tr>
+                        <tr>
+                                <td><input type="button" class="btnOpps" value="x!" onclick="fact()"></td>
+                                <td><input type="button" class="btnOpps" value="sin" onclick="sin()"></td>
+                                <td><input type="button" class="btnOpps" value="cos" onclick="cos()"></td>
+                                <td><input type="button" class="btnOpps" value="tan" onclick="tan()">
+                                </td>
+                                <td><input type="button" class="btnOpps" value="10&#x02E3;" onclick="tenToPowerX()">
+                                </td>
+                        </tr>
+                        <tr>
+                                <td><input type="button" class="btnOpps" value="&#960;"
+                                                onclick="addChar(display,Math.PI)"></td>
+                                <td><input type="button" class="btnOpps" value="1/x" onclick="reciprocal()"></td>
+                                <td><input type="button" class="btnOpps" value="mod" onclick="addChar(display, '%')">
+                                </td>
+                                <td><input type="button" class="btnOpps" value="log" onclick="log()"></td>
+
+                                <td><input type="button" class="btnOpps" value="&#177" onclick="changeSign()"></td>
+
+                        <tr>
+                                <td><input type="button" class="btnOpps" value="e&#x02E3;" onclick="exp()"></td>
+                                <td><input type="button" class="btnNum" value="7" onclick="addChar(display, '7')"></td>
+                                <td><input type="button" class="btnNum" value="8" onclick="addChar(display, '8')"></td>
+                                <td><input type="button" class="btnNum" value="9" onclick="addChar(display, '9')"></td>
+                                <td><input type="button" class="btnOpps" value="/" onclick="addChar(display, '/')"></td>
+                        </tr>
+                        <tr>
+                                <td><input type="button" class="btnOpps" value="x&#178;" onclick="x2()"></td>
+                                <td><input type="button" class="btnNum" value="4" onclick="addChar(display, '4')"></td>
+                                <td><input type="button" class="btnNum" value="5" onclick="addChar(display, '5')"></td>
+                                <td><input type="button" class="btnNum" value="6" onclick="addChar(display, '6')"></td>
+                                <td><input type="button" class="btnOpps" value="*" onclick="addChar(display, '*')"></td>
+                        </tr>
+                        <tr>
+                                <td><input type="button" class="btnOpps" value="ln" onclick="ln()"></td>
+                                <td><input type="button" class="btnNum" value="1" onclick="addChar(display, '1')"></td>
+                                <td><input type="button" class="btnNum" value="2" onclick="addChar(display, '2')"></td>
+                                <td><input type="button" class="btnNum" value="3" onclick="addChar(display, '3')"></td>
+                                <td><input type="button" class="btnOpps" value="-" onclick="addChar(display, '-')"></td>
+                        </tr>
+                        <tr>
+                                <td><input type="button" class="btnOpps" value="&radic;x" onclick="rootx()"></td>
+
+                                <td><input type="button" class="btnMath" value="&#46;"
+                                                onclick="addChar(display, '&#46;')"></td>
+                                <td><input type="button" class="btnNum" value="0" onclick="addChar(display, '0')"></td>
+                                <td><input type="button" class="btnbottom" value="=" onclick="solve()"></td>
+                                <td><input type="button" class="btnOpps" value="+" onclick="addChar(display, '+')"></td>
+                        </tr>
+                </table>
+        </form>
+</body>
+
+</html>
